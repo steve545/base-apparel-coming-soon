@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body class="h-screen w-full">
+    <main
+      class="relative grid h-full w-full font-body text-base md:grid-cols-[60%_auto]"
+    >
+      <div class="h-full justify-self-start p-8 md:hidden">
+        <img
+          src="/images/logo.svg"
+          alt="base apparel"
+          width="158px"
+          height="33px"
+        />
+      </div>
+
+      <div class="w-full md:col-start-2 md:row-span-4">
+        <img
+          src="/images/hero-mobile.jpg"
+          alt="hero mobile"
+          class="h-full w-full md:hidden"
+        />
+        <img
+          src="/images/hero-desktop.jpg"
+          alt="hero desktop"
+          class="hidden md:block md:h-screen md:w-full md:object-cover"
+        />
+      </div>
+      <div
+        id="background-container"
+        class="h-full w-full md:h-screen md:bg-pattern-desktop md:bg-cover md:bg-no-repeat"
+      >
+        <div id="text-container" class="md:m-auto md:w-[28.125rem] xl:ml-40">
+          <div id="desktop-logo" class="hidden md:m-auto md:mt-12 md:block">
+            <img src="/images/logo.svg" />
+          </div>
+          <h1
+            class="m-auto w-full pt-16 text-center text-title font-base uppercase leading-guideline-mobile tracking-guideline-wide text-desaturated-red md:mt-32 md:p-0 md:text-left md:text-title-desktop md:leading-guideline-desktop"
+          >
+            We're<br />
+            <span class="text-center font-bold text-dark-grayish-red"
+              >coming<br />soon</span
+            >
+          </h1>
+          <p
+            class="m-auto break-words pb-8 pl-10 pr-10 pt-4 text-center text-base text-desaturated-red md:mt-10 md:p-0 md:text-left"
+          >
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <form
+            data-js-form
+            class="group relative m-auto w-80 pb-24 md:m-auto md:mt-10 md:w-full"
+            novalidate
+          >
+            <label for="email">
+              <input
+                type="email"
+                id="emailInput"
+                name="email"
+                placeholder="Email Address"
+                class="peer relative h-12 w-full items-center rounded-full border p-2 pl-6 pr-28 text-start align-middle text-sm font-base opacity-75 outline-none md:pr-36"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                draggable="false"
+              />
+              <span
+                id="errorIcon"
+                class="absolute right-1/4 top-3 hidden md:right-[6.875rem]"
+              >
+                <img
+                  src="/images/icon-error.svg"
+                  draggable="false"
+                  class="select-none"
+                />
+              </span>
+              <p id="errorText" class="mt-2 hidden pl-6 text-sm text-red-500">
+                Please provide a valid email
+              </p>
+            </label>
+            <button
+              type="submit"
+              class="absolute right-0 top-0 h-12 w-16 rounded-full bg-gradient-to-r from-gradient-from-light-pink to-gradient-to-light-pink hover:shadow-xl hover:shadow-desaturated-red active:bg-gradient-from-light-pink active:bg-none md:w-24"
+            >
+              <span
+                ><img
+                  src="/images/icon-arrow.svg"
+                  draggable="false"
+                  class="m-auto select-none"
+              /></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="/public/index.js"></script>
+  </body>
+</html>
